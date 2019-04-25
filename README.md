@@ -1,2 +1,2 @@
 # prez-sql-json
-SQL JSON Presenation Materials
+SQL JSON Presentation Materials
