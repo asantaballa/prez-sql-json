@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Sequences</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/greenscreen.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+<!-- 				 -->
+
+<section>
+	<h1></h1>
+	<p style="font-size:80px; text-align: center;">
+		Declarative SQL Sequences 
+	</p>
+</section>
+
+<section>
+	<h3>Intro</h3>
+	<p>Sometimes need a simple sequential list of numbers as part of a 
+		declarative SQL query. 
+	</p>
+	<p>Easy to generate procedurally, or by having in a table, 
+		but a bit less straightforward to generate as integral 
+		part of the query.
+	<p>
+</section>
+
+<section>
+	<h1></h1>
+	<p style="font-size:80px; text-align: center;">
+		<i>Demo</i>
+	</p>
+</section>
+
+<section>
+	<h3>Demo Points</h3>
+	<ul>
+		<li>Orders without sequence</li>
+		<li>Sequence as a table</li>
+		<li>Sequence as a table valued function</li>
+		<li>Other uses: Date Table Gen</li>
+	</ul>
+</section>
+
+
+<section>
+	<h3>Alberto Santaballa</h3>
+	<ul>
+		<li>LinkedIn: <a href="https://www.linkedin.com/in/asantaballa/">https://www.linkedin.com/in/asantaballa/</a></li>
+		<li>Twitter: <a href="https://twitter.com/asantaballa">@asantaballa</a></li>
+		<li>github: <a href="https://github.com/asantaballa">https://github.com/asantaballa</a></li>
+
+		<li>This Presentation and Code: <br><a href="https://github.com/asantaballa/prez-sql-seq">https://github.com/asantaballa/prez-sql-seq</a></li>
+		
+	</ul>
+</section>
+
+<!-- 				 -->
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
