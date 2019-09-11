@@ -5,7 +5,7 @@ SELECT
 , Customer.PersonID  
 , OrderJson = 
     (
-        SELECT TOP 1
+        SELECT
           SalesOrderHeader.SalesOrderID
         , SalesOrderHeader.OrderDate
         , SalesOrderDetail.SalesOrderDetailID
@@ -15,7 +15,7 @@ SELECT
         JOIN AdventureWorks2016.Sales.SalesOrderDetail SalesOrderDetail ON SalesOrderDetail.SalesOrderID = SalesOrderHeader.SalesOrderID
         WHERE SalesOrderHeader.CustomerID = Customer.CustomerID
         ORDER BY SalesOrderHeader.OrderDate DESC
-        FOR JSON AUTO, ROOT(LastestOrder)
+        FOR JSON AUTO, ROOT('LastestOrder')
     )
 INTO T_JsonOrders
 FROM AdventureWorks2016.Sales.Customer Customer

@@ -58,6 +58,9 @@
 		<p>
 			[ ] defines an array. Multiple occurences of objects
 		</p>
+		<p>
+			"<i>name</i>": "value" defines a property (a "field") of the object. If the value is numeric it is not enclosed in quotes.
+		</p>
 	</section>
 	
 </section>
@@ -66,19 +69,50 @@
 	<h1>Sample</h1>
 	<div style="text-align: left;">
 	<pre>	
-	{"menu": {
-		"id": "file",
-		"value": "File",
-		"popup": 
-		  "menuitem": [
-			{"value": "New", "onclick": "CreateNewDoc()"},
-			{"value": "Open", "onclick": "OpenDoc()"},
-			{"value": "Close", "onclick": "CloseDoc()"}
-		  ]
-		}
-	  }}
+  {
+    "menu": {
+      "id": "myitem",
+      "value": "My Item",
+      "sequence": 37,
+      "popup": [
+        {
+          "value": "Open",
+          "onclick": "OpenDoc()"
+        },
+        {
+          "value": "Close",
+          "onclick": "CloseDoc()"
+        }
+      ]
+    }
+  }
 	</pre>
 	</div>
+</section>
+
+
+<section>
+
+    <section>
+      <h3>Generating JSON</h3>
+      <ul>
+        <li>The result set of query can be requested to be a JSON string</li>
+        <li>The <i>entire</i> result set becomes a JSON string</li>
+      </ul>
+    </section>
+    
+  </section>
+  
+  <section>
+
+	<section>
+		<h3>Pulling Data From JSON</h3>
+		<ul>
+			<li>JSON_VALUE pulls a single scalar value from a JSON string</li>
+			<li>JSON_QUERY pulls a subset of the JSON whcih is itself a JSON string</li>
+		</ul>
+	</section>
+	
 </section>
 
 <section>
@@ -92,17 +126,21 @@
 	<h3>Demo Points</h3>
 	<ul>
 		<li>JSON from query </li>
+		<li>Build table with a JSON DB field </li>
+		<li>Pull data out of a JSON DB field </li>
 	</ul>
 </section>
-
 
 <section>
 	<h3>Alberto Santaballa</h3>
 	<ul>
 		<li>LinkedIn: <a href="https://www.linkedin.com/in/asantaballa/">https://www.linkedin.com/in/asantaballa/</a></li>
 		<li>Twitter: <a href="https://twitter.com/asantaballa">@asantaballa</a></li>
-		<li>This Presentation and Code: <br><a href="https://asantaballa.github.io/prez-sql-json/">https://asantaballa.github.io/prez-sql-json/</a></li>
-		
+		<li>Presentation: <br><a href="https://asantaballa.github.io/prez-sql-json/">https://asantaballa.github.io/prez-sql-json/</a></li>
+    <li>Sample Code: <br><a href="https://github.com/asantaballa/prez-sql-json">https://github.com/asantaballa/prez-sql-json</a></li>
+    
+    
+
 	</ul>
 </section>
 
