@@ -1,18 +1,20 @@
 SELECT TOP 100   
-  c.CustomerID
-, c.PersonID  
-, soh.SalesOrderID
-, soh.OrderDate
-, sod.SalesOrderDetailID
-, sod.OrderQty
-, sod.LineTotal
-FROM AdventureWorks2016.Sales.Customer c
-JOIN AdventureWorks2016.Sales.SalesOrderHeader soh ON soh.CustomerID = c.CustomerID
-JOIN AdventureWorks2016.Sales.SalesOrderDetail sod ON sod.SalesOrderID = soh.SalesOrderID
+  Customer.CustomerID
+, Customer.PersonID  
+, SalesOrderHeader.SalesOrderID
+, SalesOrderHeader.OrderDate
+, SalesOrderDetail.SalesOrderDetailID
+, SalesOrderDetail.OrderQty
+, SalesOrderDetail.LineTotal
+FROM AdventureWorks2016.Sales.Customer Customer
+JOIN AdventureWorks2016.Sales.SalesOrderHeader SalesOrderHeader ON SalesOrderHeader.CustomerID = Customer.CustomerID
+JOIN AdventureWorks2016.Sales.SalesOrderDetail SalesOrderDetail ON SalesOrderDetail.SalesOrderID = SalesOrderHeader.SalesOrderID
 WHERE 1 = 1 
-  AND c.CustomerID in (11000,11002,11003)
-FOR JSON AUTO
+  AND Customer.CustomerID in (11000,11002,11003)
+--FOR JSON AUTO
 --FOR JSON PATH
---FOR JSON PATH, ROOT
+FOR JSON PATH, ROOT
+FOR JSON PATH, ROOT
 --FOR JSON PATH, ROOT('Customer')
+--FOR JSON AUTO, ROOT('Customer')
 ;

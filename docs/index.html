@@ -31,19 +31,54 @@
 <section>
 	<h1></h1>
 	<p style="font-size:80px; text-align: center;">
-		Declarative SQL Sequences 
+		SQL Server JSON
+	</p>
+	<p style="font-size:40px; text-align: center;">
+		In and Out
 	</p>
 </section>
 
 <section>
-	<h3>Intro</h3>
-	<p>Sometimes need a simple sequential list of numbers as part of a 
-		declarative SQL query. 
-	</p>
-	<p>Easy to generate procedurally, or by having in a table, 
-		but a bit less straightforward to generate as integral 
-		part of the query.
-	<p>
+
+	<section>
+		<h3>JSON</h3>
+		<p>
+			A way to serialize data, including hierarchical data, into a string format.
+		</p>
+		<p>
+			Similar to what we do with XML, but a slightly simpler format.
+		</p>
+	</section>
+	
+	<section>
+		<h3>JSON</h3>
+		<p>
+			{ } defines an object. Contains one or more properties each of which can be arbitrarily complex.
+		</p>
+		<p>
+			[ ] defines an array. Multiple occurences of objects
+		</p>
+	</section>
+	
+</section>
+
+<section>
+	<h1>Sample</h1>
+	<div style="text-align: left;">
+	<pre>	
+	{"menu": {
+		"id": "file",
+		"value": "File",
+		"popup": 
+		  "menuitem": [
+			{"value": "New", "onclick": "CreateNewDoc()"},
+			{"value": "Open", "onclick": "OpenDoc()"},
+			{"value": "Close", "onclick": "CloseDoc()"}
+		  ]
+		}
+	  }}
+	</pre>
+	</div>
 </section>
 
 <section>
@@ -56,10 +91,7 @@
 <section>
 	<h3>Demo Points</h3>
 	<ul>
-		<li>Orders without sequence</li>
-		<li>Sequence as a table</li>
-		<li>Sequence as a table valued function</li>
-		<li>Other uses: Date Table Gen</li>
+		<li>?</li>
 	</ul>
 </section>
 
@@ -71,7 +103,7 @@
 		<li>Twitter: <a href="https://twitter.com/asantaballa">@asantaballa</a></li>
 		<li>github: <a href="https://github.com/asantaballa">https://github.com/asantaballa</a></li>
 
-		<li>This Presentation and Code: <br><a href="https://github.com/asantaballa/prez-sql-seq">https://github.com/asantaballa/prez-sql-seq</a></li>
+		<li>This Presentation and Code: <br><a href="https://github.com/asantaballa/prez-sql-json/docs">https://github.com/asantaballa/prez-sql-json/docs</a></li>
 		
 	</ul>
 </section>
