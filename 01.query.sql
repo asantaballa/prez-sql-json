@@ -1,4 +1,4 @@
-SELECT TOP 100   
+SELECT
   Customer.CustomerID
 , Customer.PersonID  
 , SalesOrderHeader.SalesOrderID
@@ -11,10 +11,10 @@ JOIN AdventureWorks2016.Sales.SalesOrderHeader SalesOrderHeader ON SalesOrderHea
 JOIN AdventureWorks2016.Sales.SalesOrderDetail SalesOrderDetail ON SalesOrderDetail.SalesOrderID = SalesOrderHeader.SalesOrderID
 WHERE 1 = 1 
   AND Customer.CustomerID in (11000,11002,11003)
---FOR JSON AUTO
+FOR JSON AUTO
 --FOR JSON PATH
-FOR JSON PATH, ROOT
-FOR JSON PATH, ROOT
---FOR JSON PATH, ROOT('Customer')
---FOR JSON AUTO, ROOT('Customer')
+--FOR JSON AUTO, ROOT
+--FOR JSON PATH, ROOT
+--FOR JSON AUTO, ROOT('CustomerList')
+--FOR JSON PATH, ROOT('CustomerList')
 ;
